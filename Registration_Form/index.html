@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="registration-form" onsubmit="return validateForm()">
+        <h2>Registration Form</h2>
+        <p>Fill out the form carefully for registration</p>
+
+        <div class="details">
+          <label>Student Name</label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="first-name"
+              placeholder="First Name"
+              pattern="[A-Za-z]"
+              title="letter only"
+              required
+            />
+            <input type="text" id="middle-name" placeholder="Middle Name" />
+            <input
+              type="text"
+              id="last-name"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="birth">
+          <div class="input-group2">
+            <label>Birth Date:</label>
+            <select id="year">
+              <option value="year">Year</option>
+            </select>
+            <select id="month">
+              <option value="month">Month</option>
+            </select>
+            <select id="day">
+              <option value="day">Day</option>
+            </select>
+          </div>
+          <div class="input-group3">
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label>
+          </div>
+        </div>
+        <div class="address">
+          <label for="address">Address</label>
+          <div class="input-group4">
+            <input type="text" id="street-addres" placeholder="street-addres" />
+            <input
+              type="text"
+              id="street-addres2"
+              placeholder="street-addres2"
+            />
+            <div class="state">
+              <input type="text" id="city" placeholder="city" />
+              <input type="text" id="state" placeholder="state" />
+              <input type="text" id="pincode" placeholder="pincode" />
+            </div>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="email">
+            <label for="email">Student E-mail:</label>
+            <input type="email" id="email" placeholder="Email" required />
+          </div>
+          <div class="phone">
+            <label for="contact">Mobile Number:</label>
+            <input
+              type="tel"
+              id="contact"
+              placeholder="+91"
+              oninput="validateContactField()"
+              required
+            />
+          </div>
+        </div>
+        <div class="comments">
+          <label for="comments">Additional Comments</label>
+          <textarea name="comments" id="comments"></textarea>
+        </div>
+        <div class="btn"><button>SUBMIT</button></div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
